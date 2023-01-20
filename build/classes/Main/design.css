@@ -1,0 +1,21 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 21, 2023, 12:21:58 AM
+    Author     : ashik
+*/
+
+.login{
+    -fx-background-color:linear-gradient(#4b6cb7, #182848);
+}
+.loginButton{
+    -fx-background-color:linear-gradient(rgba(45,116,213,1), rgba(121,137,212,1));
+}
+.signup{
+    -fx-background-color:linear-gradient(rgba(71,139,214,1) , rgba(37,216,211,1));
+}
+.signupButton{
+    -fx-background-color:linear-gradient(rgba(5,8,114,1), rgba(7,3,53,1));
+}
