@@ -16,9 +16,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
         
         
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         Scene scene = new Scene(root); 
-        primaryStage.setTitle("Todo App");
+        primaryStage.setTitle("Booking Management System");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

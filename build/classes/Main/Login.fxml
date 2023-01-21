@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -10,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="login" prefHeight="420.0" prefWidth="700.0" styleClass="login" stylesheets="@design.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" fx:id="login" prefHeight="420.0" prefWidth="700.0" styleClass="login" stylesheets="@design.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller">
    <children>
       <TextField blendMode="SCREEN" layoutX="235.0" layoutY="195.0" prefHeight="30.0" prefWidth="230.0" promptText="Username" style="-fx-background-radius: 50;">
          <font>
@@ -35,11 +34,11 @@
             <Font name="Arial Bold" size="14.0" />
          </font>
       </Button>
-      <Hyperlink layoutX="275.0" layoutY="370.0" prefHeight="24.0" prefWidth="149.0" text="Create New Account" textFill="WHITE">
-         <font>
-            <Font name="Arial" size="15.0" />
-         </font>
-      </Hyperlink>
       <Label layoutX="293.0" layoutY="345.0" text="Don't have account??" textFill="WHITE" />
+      <Button contentDisplay="CENTER" layoutX="305.0" layoutY="370.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 50;" styleClass="loginButton" stylesheets="@design.css" text="SignUp" textFill="#f7f7f7">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
