@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+   <children>
+      <BorderPane layoutX="300.0" layoutY="109.0" prefHeight="500.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane prefHeight="50.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="50.0" layoutY="15.0" text="Movie Ticket Booking Management System">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="#ae2d3c" glyphName="PLAY" layoutX="24.0" layoutY="29.0" selectionEnd="0" size="1.3em" />
+               </children>
+            </Pane>
+         </top>
+         <left>
+            <Pane prefHeight="450.0" prefWidth="210.0" BorderPane.alignment="CENTER">
+               <children>
+                  <FontAwesomeIconView glyphName="USER" layoutX="75.0" layoutY="95.0" size="7em" />
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
