@@ -19,3 +19,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 .signupButton{
     -fx-background-color:linear-gradient(rgba(45,116,213,1), rgba(121,137,212,1));
 }
+.bg{
+    -fx-background-color:linear-gradient(rgba(45,116,213,1), rgba(121,137,212,1));
+}
