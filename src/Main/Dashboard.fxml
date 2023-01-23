@@ -1,29 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="785.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <BorderPane prefHeight="450.0" prefWidth="785.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane prefHeight="450.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <Pane prefHeight="45.0" prefWidth="785.0" styleClass="login" stylesheets="@design.css" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="71.0" layoutY="12.0" text="Movie Ticket Booking Management System" textFill="WHITE">
+                  <Label layoutX="54.0" layoutY="12.0" text="Movie Booking Management System" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="18.0" />
                      </font>
                   </Label>
+                  <FontAwesomeIcon fill="#c42121" glyphName="PLAY" layoutX="29.0" layoutY="27.0" size="1.3em" />
                </children>
             </Pane>
          </top>
          <left>
-            <Pane prefHeight="405.0" prefWidth="215.0" styleClass="login" stylesheets="@design.css" BorderPane.alignment="CENTER" />
+            <Pane prefHeight="405.0" prefWidth="215.0" styleClass="login" stylesheets="@design.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="77.0" layoutY="110.0" text="Welcome" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="133.0" text="YOUR USERNAME" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="69.0" layoutY="96.0" size="8em" />
+                  <Button layoutX="33.0" layoutY="184.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" styleClass="nav-button" stylesheets="@design.css" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="33.0" layoutY="232.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" styleClass="nav-button" stylesheets="@design.css" text="Add Movie" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="33.0" layoutY="278.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" styleClass="nav-button" stylesheets="@design.css" text="    Available Movies" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="33.0" layoutY="326.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" styleClass="nav-button" stylesheets="@design.css" text="  Edit Screaning" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="33.0" layoutY="370.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" styleClass="nav-button" stylesheets="@design.css" text="Customers" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="58.0" layoutY="434.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" styleClass="nav-button" stylesheets="@design.css" text="   Signout" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" layoutX="68.0" layoutY="457.0" size="1.4em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="DASHBOARD" layoutX="46.0" layoutY="205.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="47.0" layoutY="253.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="SERVER" layoutX="46.0" layoutY="347.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="46.0" layoutY="391.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="PLAY_CIRCLE" layoutX="47.0" layoutY="299.0" />
+               </children></Pane>
          </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="142.0" layoutY="105.0" prefHeight="504.8" prefWidth="684.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane layoutX="12.0" layoutY="14.0" prefHeight="200.0" prefWidth="660.0" styleClass="bg-white" stylesheets="@design.css" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>

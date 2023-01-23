@@ -22,3 +22,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 .bg{
     -fx-background-color:linear-gradient(rgba(45,116,213,1), rgba(121,137,212,1));
 }
+.nav-button{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+.nav-button:hover{
+    -fx-background-color:linear-gradient(rgba(45,116,213,1), rgba(121,137,212,1));
+}
+.bg-white{
+    -fx-background-color: #fff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3),8,0,0,0);
+}
