@@ -72,7 +72,7 @@
                   <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="47.0" layoutY="253.0" />
                   <FontAwesomeIcon fill="WHITE" glyphName="SERVER" layoutX="46.0" layoutY="347.0" />
                   <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="46.0" layoutY="391.0" />
-                  <FontAwesomeIcon fill="WHITE" glyphName="PLAY_CIRCLE" layoutX="47.0" layoutY="299.0" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="PLAY_CIRCLE" layoutX="46.0" layoutY="299.0" />
                </children></Pane>
          </left>
          <center>
@@ -80,7 +80,7 @@
                <children>
                   <AnchorPane layoutX="142.0" layoutY="105.0" prefHeight="504.8" prefWidth="684.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Pane layoutX="12.0" layoutY="14.0" prefHeight="200.0" prefWidth="660.0" styleClass="bg-white" stylesheets="@design.css" />
+                        <Pane layoutX="13.0" layoutY="14.0" prefHeight="200.0" prefWidth="685.0" styleClass="bg-white" stylesheets="@design.css" />
                      </children>
                   </AnchorPane>
                </children>
