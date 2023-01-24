@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller">
    <children>
       <BorderPane prefHeight="450.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -62,7 +62,7 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button layoutX="58.0" layoutY="434.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" styleClass="nav-button" stylesheets="@design.css" text="   Signout" textFill="WHITE">
+                  <Button layoutX="58.0" layoutY="434.0" mnemonicParsing="false" onAction="#SignOut" prefHeight="35.0" prefWidth="100.0" styleClass="nav-button" stylesheets="@design.css" text="   Signout" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
@@ -81,6 +81,7 @@
                   <AnchorPane layoutX="142.0" layoutY="105.0" prefHeight="504.8" prefWidth="684.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <Pane layoutX="13.0" layoutY="14.0" prefHeight="200.0" prefWidth="685.0" styleClass="bg-white" stylesheets="@design.css" />
+                        <Pane layoutX="13.0" layoutY="236.0" prefHeight="303.0" prefWidth="686.0" styleClass="bg-white" stylesheets="@design.css" />
                      </children>
                   </AnchorPane>
                </children>

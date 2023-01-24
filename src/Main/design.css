@@ -28,8 +28,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 }
 .nav-button:hover{
     -fx-background-color:linear-gradient(rgba(45,116,213,1), rgba(121,137,212,1));
+    -fx-background-radius: 20px;
 }
 .bg-white{
     -fx-background-color: #fff;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3),8,0,0,0);
+    -fx-background-radius: 6px;
+}
+.bg-white:hover{
+    -fx-effect: dropshadow(three-pass-box,rgba(45,116,213,1),8,0,0,0);
+    
 }
