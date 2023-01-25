@@ -39,3 +39,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     -fx-effect: dropshadow(three-pass-box,rgba(45,116,213,1),8,0,0,0);
     
 }
+.side-pane{
+    -fx-background-color:linear-gradient( #09203f , #537895 )
+}

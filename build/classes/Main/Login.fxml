@@ -7,38 +7,63 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="login" prefHeight="420.0" prefWidth="700.0" styleClass="login" stylesheets="@design.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller">
+<AnchorPane id="AnchorPane" fx:id="login" prefHeight="450.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller">
    <children>
-      <TextField blendMode="SCREEN" layoutX="235.0" layoutY="195.0" prefHeight="30.0" prefWidth="230.0" promptText="Username" style="-fx-background-radius: 50;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <PasswordField blendMode="SCREEN" layoutX="235.0" layoutY="246.0" prefHeight="30.0" prefWidth="230.0" promptText="Password" style="-fx-background-radius: 50;">
-         <font>
-            <Font size="14.0" />
-         </font></PasswordField>
-      <ImageView fitHeight="118.0" fitWidth="120.0" layoutX="291.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../icons/user.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="317.0" layoutY="149.0" text="Login" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="24.0" />
-         </font>
-      </Label>
-      <Button contentDisplay="CENTER" layoutX="304.0" layoutY="294.0" mnemonicParsing="false" onAction="#Dashboard" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 50;" styleClass="loginButton" stylesheets="@design.css" text="Login" textFill="#f7f7f7">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Button>
-      <Label layoutX="293.0" layoutY="345.0" text="Don't have account??" textFill="WHITE" />
-      <Button contentDisplay="CENTER" layoutX="305.0" layoutY="370.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 50;" styleClass="loginButton" stylesheets="@design.css" text="SignUp" textFill="#f7f7f7">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Button>
+      <Pane layoutX="365.0" prefHeight="450.0" prefWidth="365.0" styleClass="side-pane" stylesheets="@design.css">
+         <children>
+            <Button contentDisplay="CENTER" layoutX="138.0" layoutY="363.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 50;" styleClass="loginButton" stylesheets="@design.css" text="SignUp" textFill="#f7f7f7">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="89.0" layoutY="215.0" text="Don't have account??" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="104.0" text="Welcome Back !" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="137.0" layoutY="266.0" text="Sign Up here!" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="450.0" prefWidth="365.0" styleClass="login" stylesheets="@design.css">
+         <children>
+            <ImageView fitHeight="118.0" fitWidth="120.0" layoutX="124.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/user.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="148.0" layoutY="198.0" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField blendMode="SCREEN" layoutX="66.0" layoutY="252.0" prefHeight="30.0" prefWidth="230.0" promptText="Username" style="-fx-background-radius: 50;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <PasswordField blendMode="SCREEN" layoutX="66.0" layoutY="306.0" prefHeight="30.0" prefWidth="230.0" promptText="Password" style="-fx-background-radius: 50;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <Button contentDisplay="CENTER" layoutX="138.0" layoutY="361.0" mnemonicParsing="false" onAction="#Dashboard" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 50;" styleClass="loginButton" stylesheets="@design.css" text="Login" textFill="#f7f7f7">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
