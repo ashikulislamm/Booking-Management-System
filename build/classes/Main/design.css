@@ -14,7 +14,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     -fx-background-color:linear-gradient(rgba(45,116,213,1), rgba(121,137,212,1));
 }
 .signup{
-    -fx-background-color:linear-gradient(#4b6cb7, #182848);;
+    -fx-background-color:linear-gradient(#4b6cb7, #182848);
+    ;
 }
 .signupButton{
     -fx-background-color:linear-gradient(rgba(45,116,213,1), rgba(121,137,212,1));
@@ -36,9 +37,59 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     -fx-background-radius: 6px;
 }
 .bg-white:hover{
-    -fx-effect: dropshadow(three-pass-box,rgba(45,116,213,1),8,0,0,0);
-    
+    -fx-effect: dropshadow(three-pass-box,#09203f,8,0,0,0);
+
 }
 .side-pane{
-    -fx-background-color:linear-gradient( #09203f , #537895 )
+    -fx-background-color:linear-gradient( #09203f , #537895 );
+}
+.card1{
+    -fx-background-color:linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    -fx-background-radius: 10px 10px 10px 10px;
+}
+.card2{
+    -fx-background-color:linear-gradient(to right, #1f1c2c, #928dab);
+    -fx-background-radius: 10px 10px 10px 10px;
+}
+.card3{
+    -fx-background-color:  linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    -fx-background-radius: 10px 10px 10px 10px;
+}
+.admovie-btn{
+    -fx-background-color:linear-gradient( #09203f , #537895 );
+    -fx-background-radius: 20px;
+}
+.addmovie-textfield{
+   -fx-background-color: #fff;
+   -fx-background-radius: 0px 5px 0px 0px;
+   -fx-border-color: #1e242e;
+   -fx-border-width: 0.8px;
+   -fx-border-radius: 0px 5px 0px 0px;
+}
+.addmovie-textfield:focused{
+    -fx-border-color: #537895;
+    -fx-border-width: 1px;
+}
+.table-view{
+    -fx-background-color: #fff;
+    -fx-background-radius: 10px;
+    -fx-border-color: #537895;
+    -fx-border-radius: 10px;
+    -fx-fill: #fff;
+}
+.table-view .column-header .label{
+    -fx-text-fill:#fff;
+}
+.table-view .column-header-background{
+    -fx-background-color:linear-gradient( #09203f , #537895 );
+    -fx-background-insets: 0 0 0 0 ;
+    -fx-background-radius: 10px 10px 0px 0px;
+}
+
+.table-view .column-header , .table-view .filler{
+    -fx-background-color: transparent;
+    -fx-fill: #fff;
+}
+.search{
+    -fx-padding: 0px 0px 0px 20px;
 }
