@@ -93,3 +93,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 .search{
     -fx-padding: 0px 0px 0px 20px;
 }
+.info-card{
+    -fx-border-color: #1e242e;
+    -fx-border-radius: 6px 0px 0px 6px;
+    
+}
+.info-label{
+    -fx-border-color: #1e242e;;
+    -fx-border-radius: 0px 5px 0px 0px;
+    -fx-padding: 2px;
+        
+}
+.spinner{
+    -fx-background-color: #fff;
+    -fx-border-color: #000;
+    -fx-border-width: 0.5px;
+    
+}
+.combo-box{
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-border-color: #537895;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+.combo-box:focused{
+    -fx-border-color: #537895;
+    -fx-border-width: 1.5px;
+}

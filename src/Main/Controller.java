@@ -58,19 +58,60 @@ public class Controller {
         stage.show();
 
     }
-    @FXML
+     @FXML
     private AnchorPane addmovie;
+
+    @FXML
+    private AnchorPane availablemovies;
+
+    @FXML
+    private AnchorPane customers;
 
     @FXML
     private AnchorPane dashboard;
 
+    @FXML
+    private AnchorPane editscreen;
+
     public void addmovie() {
         addmovie.setVisible(true);
         dashboard.setVisible(false);
+        availablemovies.setVisible(false);
+        editscreen.setVisible(false);
+        customers.setVisible(false);
     }
     public void dashboard()
     {
-        addmovie.setVisible(false);
         dashboard.setVisible(true);
+        addmovie.setVisible(false);
+        availablemovies.setVisible(false);
+        customers.setVisible(false);
+        editscreen.setVisible(false);
+        
     }
+    public void avaiable()
+    {
+        dashboard.setVisible(false);
+        addmovie.setVisible(false);
+        availablemovies.setVisible(true);
+        customers.setVisible(false);
+        editscreen.setVisible(false);
+    }
+    public void edit()
+    {
+        dashboard.setVisible(false);
+        addmovie.setVisible(false);
+        availablemovies.setVisible(false);
+        customers.setVisible(false);
+        editscreen.setVisible(true);
+    }
+    public void customer()
+    {
+        dashboard.setVisible(false);
+        addmovie.setVisible(false);
+        availablemovies.setVisible(false);
+        customers.setVisible(true);
+        editscreen.setVisible(false);
+    }
+        
 }
