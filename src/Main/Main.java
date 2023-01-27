@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
     
@@ -23,6 +24,7 @@ public class Main extends Application {
         primaryStage.getIcons().add(image);
         primaryStage.setTitle("Booking Management System");
         primaryStage.setScene(scene);
+        //primaryStage.initStyle(StageStyle.UNIFIED);
         primaryStage.show();
     }
     

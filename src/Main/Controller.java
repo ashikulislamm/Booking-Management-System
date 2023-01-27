@@ -113,5 +113,16 @@ public class Controller {
         customers.setVisible(true);
         editscreen.setVisible(false);
     }
-        
+    @FXML
+    private AnchorPane ap;
+    @FXML
+    public void handleAction(ActionEvent event)
+    {
+        Stage stage = (Stage)ap.getScene().getWindow();
+        stage.setIconified(true);
+    }
+    public void exit()
+    {
+        System.exit(0);
+    }
 }
