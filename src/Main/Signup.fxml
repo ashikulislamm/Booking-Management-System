@@ -48,22 +48,22 @@
                   <Font name="Arial Bold" size="24.0" />
                </font>
             </Label>
-            <TextField layoutX="69.0" layoutY="221.0" prefHeight="30.0" prefWidth="250.0" promptText="Email" style="-fx-background-radius: 50;">
+            <TextField fx:id="signup_email" layoutX="69.0" layoutY="221.0" prefHeight="30.0" prefWidth="250.0" promptText="Email" style="-fx-background-radius: 50;">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <TextField layoutX="69.0" layoutY="263.0" prefHeight="30.0" prefWidth="250.0" promptText="Username" style="-fx-background-radius: 50;">
+            <TextField fx:id="signup_username" layoutX="69.0" layoutY="263.0" prefHeight="30.0" prefWidth="250.0" promptText="Username" style="-fx-background-radius: 50;">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <PasswordField layoutX="69.0" layoutY="305.0" prefHeight="30.0" prefWidth="250.0" promptText="Password" style="-fx-background-radius: 50;">
+            <PasswordField fx:id="signup_password" layoutX="69.0" layoutY="305.0" prefHeight="30.0" prefWidth="250.0" promptText="Password" style="-fx-background-radius: 50;">
                <font>
                   <Font size="14.0" />
                </font>
             </PasswordField>
-            <Button layoutX="141.0" layoutY="354.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 50;" styleClass="signupButton" stylesheets="@design.css" text="Signup" textFill="WHITE">
+            <Button layoutX="141.0" layoutY="354.0" mnemonicParsing="false" onAction="#backtToLogin" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 50;" styleClass="signupButton" stylesheets="@design.css" text="Signup" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>

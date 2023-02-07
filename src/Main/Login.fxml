@@ -14,7 +14,7 @@
    <children>
       <Pane layoutX="365.0" prefHeight="450.0" prefWidth="365.0" styleClass="side-pane" stylesheets="@design.css">
          <children>
-            <Button contentDisplay="CENTER" layoutX="138.0" layoutY="363.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 50;" styleClass="loginButton" stylesheets="@design.css" text="SignUp" textFill="#f7f7f7">
+            <Button contentDisplay="CENTER" layoutX="138.0" layoutY="354.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 50;" styleClass="loginButton" stylesheets="@design.css" text="SignUp" textFill="#f7f7f7">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
@@ -38,27 +38,27 @@
       </Pane>
       <Pane prefHeight="450.0" prefWidth="365.0" styleClass="login" stylesheets="@design.css">
          <children>
-            <ImageView fitHeight="118.0" fitWidth="120.0" layoutX="124.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="118.0" fitWidth="120.0" layoutX="124.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../icons/user.png" />
                </image>
             </ImageView>
-            <Label layoutX="148.0" layoutY="198.0" text="Login" textFill="WHITE">
+            <Label layoutX="150.0" layoutY="172.0" text="Login" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="24.0" />
                </font>
             </Label>
-            <TextField blendMode="SCREEN" layoutX="66.0" layoutY="252.0" prefHeight="30.0" prefWidth="230.0" promptText="Username" style="-fx-background-radius: 50;">
+            <TextField fx:id="username" blendMode="SCREEN" layoutX="68.0" layoutY="225.0" prefHeight="30.0" prefWidth="230.0" promptText="Username" style="-fx-background-radius: 50;">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <PasswordField blendMode="SCREEN" layoutX="66.0" layoutY="306.0" prefHeight="30.0" prefWidth="230.0" promptText="Password" style="-fx-background-radius: 50;">
+            <PasswordField fx:id="login_password" blendMode="SCREEN" layoutX="68.0" layoutY="279.0" prefHeight="30.0" prefWidth="230.0" promptText="Password" style="-fx-background-radius: 50;">
                <font>
                   <Font size="14.0" />
                </font>
             </PasswordField>
-            <Button contentDisplay="CENTER" layoutX="138.0" layoutY="361.0" mnemonicParsing="false" onAction="#Dashboard" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 50;" styleClass="loginButton" stylesheets="@design.css" text="Login" textFill="#f7f7f7">
+            <Button contentDisplay="CENTER" layoutX="138.0" layoutY="351.0" mnemonicParsing="false" onAction="#Dashboard" prefHeight="35.0" prefWidth="90.0" style="-fx-background-radius: 50;" styleClass="loginButton" stylesheets="@design.css" text="Login" textFill="#f7f7f7">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
