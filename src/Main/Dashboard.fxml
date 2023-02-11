@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.dashboardController">
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.dashboardController">
    <children>
       <BorderPane prefHeight="450.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -135,7 +135,7 @@
                         <Pane layoutX="13.0" layoutY="215.0" prefHeight="324.0" prefWidth="760.0" styleClass="bg-white" stylesheets="@design.css" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="addmovie" layoutX="155.0" layoutY="116.0" prefHeight="554.4" prefWidth="710.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane fx:id="addmovie" layoutX="155.0" layoutY="116.0" prefHeight="554.4" prefWidth="710.4" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <Pane layoutX="14.0" layoutY="12.0" prefHeight="530.0" prefWidth="270.0" style="-fx-background-color: white;" styleClass="bg-white" stylesheets="@design.css">
                            <children>
@@ -342,7 +342,7 @@
                         </Pane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="editscreen" layoutX="14.0" layoutY="14.0" prefHeight="554.4" prefWidth="755.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane fx:id="editscreen" layoutX="14.0" layoutY="14.0" prefHeight="554.4" prefWidth="755.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <Pane layoutX="14.0" layoutY="14.0" prefHeight="530.0" prefWidth="270.0" styleClass="bg-white" stylesheets="@design.css">
                            <children>
@@ -356,18 +356,18 @@
                                     <Font name="Arial Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <ComboBox fx:id="editScreen_Current" layoutX="120.0" layoutY="296.0" prefHeight="25.0" prefWidth="120.0" promptText="Choose" styleClass="combo-box" stylesheets="@design.css" />
+                              <ComboBox fx:id="editScreen_Current" layoutX="120.0" layoutY="296.0" onAction="#comboBox" prefHeight="25.0" prefWidth="120.0" promptText="Choose" styleClass="combo-box" stylesheets="@design.css" />
                               <Label layoutX="55.0" layoutY="299.0" text="Current :">
                                  <font>
                                     <Font name="Arial" size="16.0" />
                                  </font>
                               </Label>
-                              <Button fx:id="editScreen_Update" layoutX="27.0" layoutY="364.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" styleClass="admovie-btn" stylesheets="@design.css" text="Update" textFill="WHITE">
+                              <Button fx:id="editScreen_Update" layoutX="27.0" layoutY="364.0" mnemonicParsing="false" onAction="#updateEditScreening" prefHeight="40.0" prefWidth="90.0" styleClass="admovie-btn" stylesheets="@design.css" text="Update" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="editScreen_delete" layoutX="157.0" layoutY="364.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" styleClass="admovie-btn" stylesheets="@design.css" text="Delete" textFill="WHITE">
+                              <Button fx:id="editScreen_delete" layoutX="157.0" layoutY="364.0" mnemonicParsing="false" onAction="#clearEditScreening" prefHeight="40.0" prefWidth="90.0" styleClass="admovie-btn" stylesheets="@design.css" text="Clear" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="14.0" />
                                  </font>
@@ -378,7 +378,7 @@
                            <children>
                               <TextField fx:id="editScreen_Search" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="330.0" promptText="Search" styleClass="search" stylesheets="@design.css" />
                               <FontAwesomeIcon glyphName="SEARCH" layoutX="20.0" layoutY="31.0" size="1.1em" />
-                              <TableView layoutX="8.0" layoutY="51.0" prefHeight="474.0" prefWidth="460.0">
+                              <TableView fx:id="addScreening_tableView" layoutX="8.0" layoutY="51.0" onMouseClicked="#selectEditScreening" prefHeight="474.0" prefWidth="460.0">
                                 <columns>
                                   <TableColumn fx:id="editScreen_Table_Title" prefWidth="147.199951171875" text="Movie Title" />
                                   <TableColumn fx:id="editScreen_Table_Genre" prefWidth="112.0" text="Genre" />
