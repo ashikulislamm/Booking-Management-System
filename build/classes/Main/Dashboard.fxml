@@ -356,18 +356,18 @@
                                     <Font name="Arial Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <ComboBox fx:id="editScreen_Current" layoutX="120.0" layoutY="296.0" prefHeight="25.0" prefWidth="120.0" promptText="Choose" styleClass="combo-box" stylesheets="@design.css" />
+                              <ComboBox fx:id="editScreen_Current" layoutX="120.0" layoutY="296.0" onAction="#comboBox" prefHeight="25.0" prefWidth="120.0" promptText="Choose" styleClass="addmovie-textfield" stylesheets="@design.css" />
                               <Label layoutX="55.0" layoutY="299.0" text="Current :">
                                  <font>
                                     <Font name="Arial" size="16.0" />
                                  </font>
                               </Label>
-                              <Button fx:id="editScreen_Update" layoutX="27.0" layoutY="364.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" styleClass="admovie-btn" stylesheets="@design.css" text="Update" textFill="WHITE">
+                              <Button fx:id="editScreen_Update" layoutX="27.0" layoutY="364.0" mnemonicParsing="false" onAction="#updateEditScreening" prefHeight="40.0" prefWidth="90.0" styleClass="admovie-btn" stylesheets="@design.css" text="Update" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="editScreen_delete" layoutX="157.0" layoutY="364.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" styleClass="admovie-btn" stylesheets="@design.css" text="Clear" textFill="WHITE">
+                              <Button fx:id="editScreen_delete" layoutX="157.0" layoutY="364.0" mnemonicParsing="false" onAction="#clearEditScreening" prefHeight="40.0" prefWidth="90.0" styleClass="admovie-btn" stylesheets="@design.css" text="Clear" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="14.0" />
                                  </font>
@@ -376,9 +376,9 @@
                         </Pane>
                         <Pane layoutX="303.0" layoutY="14.0" prefHeight="530.0" prefWidth="474.0" styleClass="bg-white" stylesheets="@design.css">
                            <children>
-                              <TextField fx:id="editScreen_Search" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="330.0" promptText="Search" styleClass="search" stylesheets="@design.css" />
+                              <TextField fx:id="editScreen_Search" layoutX="14.0" layoutY="14.0" onKeyTyped="#searchEditScreening" prefHeight="25.0" prefWidth="330.0" promptText="Search" styleClass="search" stylesheets="@design.css" />
                               <FontAwesomeIcon glyphName="SEARCH" layoutX="20.0" layoutY="31.0" size="1.1em" />
-                              <TableView fx:id="addScreening_tableView" layoutX="8.0" layoutY="51.0" prefHeight="474.0" prefWidth="460.0">
+                              <TableView fx:id="addScreening_tableView" layoutX="8.0" layoutY="51.0" onMouseClicked="#selectEditScreening" prefHeight="474.0" prefWidth="460.0">
                                 <columns>
                                   <TableColumn fx:id="editScreen_Table_Title" prefWidth="147.199951171875" text="Movie Title" />
                                   <TableColumn fx:id="editScreen_Table_Genre" prefWidth="112.0" text="Genre" />
