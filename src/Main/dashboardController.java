@@ -201,13 +201,17 @@ public class dashboardController implements Initializable {
     private Button availableMovie_Select;
 
     @FXML
-    private TableColumn<?, ?> availableMovie_Table_Date;
+    private TableView<moviesData> availablemovies_tableView;
+    
+    @FXML
+    private TableColumn<moviesData, String> availableMovie_Table_Date;
 
     @FXML
-    private TableColumn<?, ?> availableMovie_Table_Genre;
+    private TableColumn<moviesData, String> availableMovie_Table_Genre;
 
     @FXML
-    private TableColumn<?, ?> availableMovie_Table_Title;
+    private TableColumn<moviesData, String> availableMovie_Table_Title;
+
 
     @FXML
     private Label availableMovie_Title;
@@ -357,6 +361,7 @@ public class dashboardController implements Initializable {
     }
     private ObservableList<moviesData> listAddMovies;
 
+    
     public void showAddMoviesList() {
         listAddMovies = addMovieslist();
 
@@ -576,7 +581,100 @@ public class dashboardController implements Initializable {
         }
 
     }
-
+    
+    //For Available movies
+    public ObservableList<moviesData> availableMoviesList(){
+    
+      ObservableList<moviesData> listAvMovies = FXCollections.observableArrayList();
+      
+      String sql = "SELECT * FROM movie WHERE current = 'Showing'";
+      
+      connect = database.connectDb(); 
+    
+      try{
+      
+          prepare = connect.prepareStatement(sql);
+          result = prepare.executeQuery();
+          
+          moviesData movD;
+          
+          while(result.next()){
+          
+              movD = new moviesData(result.getInt("id"),
+                        result.getString("movieTitle"),
+                        result.getString("genre"),
+                        result.getString("duration"),
+                        result.getString("image"),
+                        result.getDate("date"),
+                        result.getString("current"));
+           
+              listAvMovies.add(movD);
+          }
+      }catch(Exception e){e.printStackTrace();}
+       
+      return listAvMovies;
+    }
+    
+    private ObservableList<moviesData> availableMoviesList;
+    public void showAvailableMovies(){
+    
+        availableMoviesList = availableMoviesList();
+        
+        availableMovie_Table_Title.setCellValueFactory(new PropertyValueFactory<>("title"));
+        availableMovie_Table_Genre.setCellValueFactory(new PropertyValueFactory<>("genre"));
+        availableMovie_Table_Date.setCellValueFactory(new PropertyValueFactory<>("date"));
+        
+        
+        availablemovies_tableView.setItems(availableMoviesList);
+        
+    }
+    
+    public void selectAvailableMovies(){
+    
+     moviesData movD = (moviesData) availablemovies_tableView.getSelectionModel().getSelectedItems();
+     int num = availablemovies_tableView.getSelectionModel().getSelectedIndex();
+     
+     if ((num -1) < -1){
+         return;
+     }
+     
+     availableMovie_Title.setText(movD.getTitle());
+     availableMovie_Genre.setText(movD.getGenre());
+     availableMovie_Date.setText(String.valueOf(movD.getDate()));
+     
+     getData.path = movD.getImage();
+     getData.title = movD.getTitle();
+     
+    }
+    
+    public void selectMovie(){
+    
+        Alert alert;
+        
+         //checking if movie is selected first
+        if(availableMovie_Title.getText().isEmpty()){
+          alert = new Alert(AlertType.ERROR);
+          alert.setTitle("Error Message");
+          alert.setHeaderText(null);
+          alert.setContentText("Please select the movie first");
+        }else
+        {
+            
+        String uri = "file:" +getData.path;
+        image = new Image(uri, 160, 200, false, true);
+        availableMovie_Imageview.setImage(image);
+        
+        availableMovie_Label.setText(getData.title);
+        
+        //clearing text
+        availableMovie_Title.setText("");
+        availableMovie_Genre.setText("");
+        availableMovie_Date.setText("");
+        
+        }
+        
+    }
+    
     //For Edit Screen
     private String[] currentList = {"Showing", "End showing"};
 
@@ -750,5 +848,8 @@ public class dashboardController implements Initializable {
         // For Edit Screen  
         showEditScreening();
         comboBox();
+        
+        //For showing available movies
+        showAvailableMovies();
     }
 }
