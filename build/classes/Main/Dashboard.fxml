@@ -9,6 +9,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -85,7 +86,7 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane fx:id="dashboard" layoutX="142.0" layoutY="105.0" prefHeight="504.8" prefWidth="684.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane fx:id="dashboard" layoutX="142.0" layoutY="105.0" prefHeight="504.8" prefWidth="684.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <Pane layoutX="12.0" layoutY="14.0" prefHeight="194.0" prefWidth="760.0" styleClass="bg-white" stylesheets="@design.css">
                            <children>
@@ -132,7 +133,47 @@
                                     </Label>
                                  </children></Pane>
                            </children></Pane>
-                        <Pane layoutX="13.0" layoutY="215.0" prefHeight="324.0" prefWidth="760.0" styleClass="bg-white" stylesheets="@design.css" />
+                        <Pane layoutX="13.0" layoutY="215.0" prefHeight="324.0" prefWidth="760.0" styleClass="bg-white" stylesheets="@design.css">
+                           <children>
+                              <AnchorPane fx:id="slider1" layoutX="123.0" layoutY="36.0" prefHeight="246.0" prefWidth="425.0">
+                                 <children>
+                                    <ImageView fx:id="image1" fitHeight="264.0" fitWidth="514.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/Slider1.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="slider2" layoutX="123.0" layoutY="36.0" prefHeight="264.0" prefWidth="425.0">
+                                 <children>
+                                    <ImageView fx:id="image2" blendMode="SRC_ATOP" fitHeight="265.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/Slider2.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="slider3" layoutX="123.0" layoutY="36.0" prefHeight="264.0" prefWidth="426.0">
+                                 <children>
+                                    <ImageView fx:id="image3" fitHeight="264.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/Slider3.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="slider4" layoutX="123.0" layoutY="36.0" prefHeight="264.0" prefWidth="424.0">
+                                 <children>
+                                    <ImageView fx:id="image4" fitHeight="255.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/Slider4.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <Button layoutX="14.0" layoutY="149.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="30.0" style="-fx-background-color: WHITE;" text="&lt;" />
+                              <Button layoutX="716.0" layoutY="149.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="30.0" style="-fx-background-color: WHITE;" text="&gt;" />
+                           </children></Pane>
                      </children>
                   </AnchorPane>
                   <AnchorPane fx:id="addmovie" layoutX="155.0" layoutY="116.0" prefHeight="554.4" prefWidth="710.4" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -234,7 +275,7 @@
                                           <Font name="Arial" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Button fx:id="availableMovie_Select" layoutX="88.0" layoutY="159.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" styleClass="admovie-btn" stylesheets="@design.css" text="Select Movie" textFill="WHITE">
+                                    <Button fx:id="availableMovie_Select" layoutX="88.0" layoutY="159.0" mnemonicParsing="false" onAction="#selectMovie" prefHeight="30.0" prefWidth="110.0" styleClass="admovie-btn" stylesheets="@design.css" text="Select Movie" textFill="WHITE">
                                        <font>
                                           <Font name="Arial Bold" size="14.0" />
                                        </font>
@@ -251,7 +292,7 @@
                                     </Label>
                                  </children>
                               </Pane>
-                              <TableView layoutX="296.0" layoutY="5.0" prefHeight="200.0" prefWidth="470.0">
+                              <TableView fx:id="availablemovies_tableView" layoutX="296.0" layoutY="5.0" onMouseClicked="#selectAvailableMovies" prefHeight="200.0" prefWidth="470.0">
                                 <columns>
                                   <TableColumn fx:id="availableMovie_Table_Title" prefWidth="212.79998779296875" text="Movie Name" />
                                   <TableColumn fx:id="availableMovie_Table_Genre" prefWidth="123.20013427734375" text="Genre" />
@@ -286,39 +327,39 @@
                                     <Font name="Arial" size="18.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="616.0" layoutY="69.0" text="Price($)">
+                              <Label layoutX="602.0" layoutY="69.0" text="Price($)">
                                  <font>
                                     <Font name="Arial" size="18.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="322.0" layoutY="115.0" text="Regular Class :">
+                              <Label layoutX="322.0" layoutY="115.0" text="Regular Seat :">
                                  <font>
                                     <Font name="Arial" size="18.0" />
                                  </font>
                               </Label>
-                              <Spinner fx:id="availableMovie_regularQuantity" layoutX="463.0" layoutY="112.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #fff;" stylesheets="@design.css" />
-                              <Label fx:id="availableMovie_regularPrice" layoutX="614.0" layoutY="115.0" text="\$0.00">
+                              <Spinner fx:id="availableMovie_regularQuantity" layoutX="463.0" layoutY="112.0" onMouseClicked="#getSpinnerValue" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #fff;" styleClass="info-label" stylesheets="@design.css" />
+                              <Label fx:id="availableMovie_regularPrice" layoutX="602.0" layoutY="115.0" text="৳ 0.00">
                                  <font>
                                     <Font name="Arial" size="18.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="312.0" layoutY="164.0" text="Premium Class :">
+                              <Label layoutX="312.0" layoutY="164.0" text="Premium Seat :">
                                  <font>
                                     <Font name="Arial" size="18.0" />
                                  </font>
                               </Label>
-                              <Spinner fx:id="availableMovie_PremiumQuantity" layoutX="463.0" layoutY="161.0" prefHeight="25.0" prefWidth="99.0" stylesheets="@design.css" />
-                              <Label fx:id="availableMovie_PremiumPrice" layoutX="614.0" layoutY="164.0" text="\$0.00">
+                              <Spinner fx:id="availableMovie_PremiumQuantity" layoutX="463.0" layoutY="161.0" onMouseClicked="#getSpinnerValue" prefHeight="25.0" prefWidth="99.0" styleClass="info-label" stylesheets="@design.css" />
+                              <Label fx:id="availableMovie_PremiumPrice" layoutX="602.0" layoutY="164.0" text="৳ 0.00">
                                  <font>
                                     <Font name="Arial" size="18.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="617.0" layoutY="203.0" text="Total :">
+                              <Label layoutX="595.0" layoutY="201.0" text="Total :">
                                  <font>
                                     <Font name="Arial" size="18.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="availableMovie_TotalPrice" layoutX="682.0" layoutY="203.0" text="\$0.00">
+                              <Label fx:id="availableMovie_TotalPrice" layoutX="660.0" layoutY="201.0" text="৳ 0.00">
                                  <font>
                                     <Font name="Arial" size="18.0" />
                                  </font>
@@ -328,12 +369,12 @@
                                     <Font name="Arial Bold" size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="availableMovie_Buy" layoutX="647.0" layoutY="246.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" styleClass="admovie-btn" stylesheets="@design.css" text="Buy" textFill="WHITE">
+                              <Button fx:id="availableMovie_Buy" layoutX="647.0" layoutY="246.0" mnemonicParsing="false" onAction="#buy" prefHeight="30.0" prefWidth="70.0" styleClass="admovie-btn" stylesheets="@design.css" text="Buy" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="availableMovie_Clear" layoutX="359.0" layoutY="246.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" styleClass="admovie-btn" stylesheets="@design.css" text="Clear" textFill="WHITE">
+                              <Button fx:id="availableMovie_Clear" layoutX="359.0" layoutY="246.0" mnemonicParsing="false" onAction="#clearPurchaseTicketInfo" prefHeight="30.0" prefWidth="70.0" styleClass="admovie-btn" stylesheets="@design.css" text="Clear" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="14.0" />
                                  </font>
@@ -342,7 +383,7 @@
                         </Pane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="editscreen" layoutX="14.0" layoutY="14.0" prefHeight="554.4" prefWidth="755.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane fx:id="editscreen" layoutX="14.0" layoutY="14.0" prefHeight="554.4" prefWidth="755.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <Pane layoutX="14.0" layoutY="14.0" prefHeight="530.0" prefWidth="270.0" styleClass="bg-white" stylesheets="@design.css">
                            <children>
@@ -394,7 +435,7 @@
                      <children>
                         <Pane layoutX="14.0" layoutY="14.0" prefHeight="530.0" prefWidth="271.0" styleClass="bg-white" stylesheets="@design.css">
                            <children>
-                              <Pane layoutX="10.0" layoutY="14.0" prefHeight="260.0" prefWidth="255.0" styleClass="card-customer" stylesheets="@design.css">
+                              <Pane layoutX="10.0" layoutY="14.0" prefHeight="238.0" prefWidth="255.0" styleClass="card-customer" stylesheets="@design.css">
                                  <children>
                                     <Label layoutX="14.0" layoutY="28.0" text="Ticket No :">
                                        <font>
@@ -408,32 +449,26 @@
                                        </font>
                                     </Label>
                                     <TextField fx:id="customer_Title" layoutX="96.0" layoutY="66.0" prefWidth="145.0" styleClass="info-label" stylesheets="@design.css" />
-                                    <Label layoutX="16.0" layoutY="110.0" text="Payment :">
+                                    <Label layoutX="40.0" layoutY="122.0" text="Date :">
                                        <font>
                                           <Font name="Arial" size="14.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="customer_Payment" layoutX="96.0" layoutY="106.0" prefWidth="145.0" styleClass="info-label" stylesheets="@design.css" />
-                                    <Label layoutX="41.0" layoutY="158.0" text="Date :">
+                                    <TextField fx:id="customer_Date" layoutX="96.0" layoutY="118.0" prefWidth="145.0" styleClass="info-label" stylesheets="@design.css" />
+                                    <Label layoutX="40.0" layoutY="169.0" text="Time :">
                                        <font>
                                           <Font name="Arial" size="14.0" />
                                        </font>
                                     </Label>
-                                    <TextField fx:id="customer_Date" layoutX="96.0" layoutY="154.0" prefWidth="145.0" styleClass="info-label" stylesheets="@design.css" />
-                                    <Label layoutX="40.0" layoutY="205.0" text="Time :">
-                                       <font>
-                                          <Font name="Arial" size="14.0" />
-                                       </font>
-                                    </Label>
-                                    <TextField fx:id="customer_Time" layoutX="96.0" layoutY="201.0" prefWidth="145.0" styleClass="info-label" stylesheets="@design.css" />
+                                    <TextField fx:id="customer_Time" layoutX="96.0" layoutY="165.0" prefWidth="145.0" styleClass="info-label" stylesheets="@design.css" />
                                  </children>
                               </Pane>
-                              <Button fx:id="customer_clear" layoutX="27.0" layoutY="317.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" styleClass="admovie-btn" stylesheets="@design.css" text="Clear" textFill="WHITE">
+                              <Button fx:id="customer_clear" layoutX="27.0" layoutY="317.0" mnemonicParsing="false" onAction="#clearCustomer" prefHeight="35.0" prefWidth="80.0" styleClass="admovie-btn" stylesheets="@design.css" text="Clear" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="14.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="customer_Delete" layoutX="150.0" layoutY="317.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" styleClass="admovie-btn" stylesheets="@design.css" text="Delete" textFill="WHITE">
+                              <Button fx:id="customer_Delete" layoutX="150.0" layoutY="317.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="35.0" prefWidth="80.0" styleClass="admovie-btn" stylesheets="@design.css" text="Delete" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="14.0" />
                                  </font>
@@ -442,15 +477,14 @@
                         </Pane>
                         <Pane layoutX="297.0" layoutY="14.0" prefHeight="530.0" prefWidth="481.0" styleClass="bg-white" stylesheets="@design.css">
                            <children>
-                              <TextField fx:id="customer_Search" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="250.0" promptText="Search" styleClass="search" stylesheets="@design.css" />
+                              <TextField fx:id="customer_Search" layoutX="14.0" layoutY="14.0" onKeyTyped="#searchCustomer" prefHeight="30.0" prefWidth="250.0" promptText="Search" styleClass="search" stylesheets="@design.css" />
                               <FontAwesomeIcon glyphName="SEARCH" layoutX="21.0" layoutY="33.0" size="1.1em" />
-                              <TableView layoutX="6.0" layoutY="50.0" prefHeight="466.0" prefWidth="469.0">
+                              <TableView fx:id="customer_Table" layoutX="6.0" layoutY="50.0" onMouseClicked="#selectcustomerList" prefHeight="466.0" prefWidth="469.0">
                                 <columns>
                                   <TableColumn fx:id="customer_Table_Title" prefWidth="135.20001220703125" text="Movie Title" />
                                   <TableColumn fx:id="customer_Table_TicketNo" prefWidth="81.5999755859375" text="Ticket No" />
-                                    <TableColumn fx:id="customer_Table_Payment" prefWidth="80.79998779296875" text="Payment" />
-                                    <TableColumn fx:id="customer_Table_Date" prefWidth="88.0" text="Date" />
-                                    <TableColumn fx:id="customer_Table_Time" prefWidth="79.199951171875" text="Time" />
+                                    <TableColumn fx:id="customer_Table_Date" prefWidth="121.60003662109375" text="Date" />
+                                    <TableColumn fx:id="customer_Table_Time" prefWidth="125.5999755859375" text="Time" />
                                 </columns>
                               </TableView>
                            </children>

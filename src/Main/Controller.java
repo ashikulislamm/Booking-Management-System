@@ -69,17 +69,6 @@ public class Controller {
     private Statement statement;
     private ResultSet result;
     private Connection con;
-
-    /*public Connection connectDb() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/booking", "root", "");
-            return con;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }*/
     private Connection connect;
     Alert alert;
 
@@ -209,8 +198,4 @@ public class Controller {
             e.printStackTrace();
         }
     }
-    //Databse Control Ends
-
-    ///DashBoard Controlling Starts
-    //Dashboard Scene Controlls
 }
