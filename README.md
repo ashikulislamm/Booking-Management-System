@@ -8,11 +8,6 @@ booking employees so they can update movie information and posters swiftly
 and smoothly.
 
 
-
-
-
-
-
 ## Software Platforms
 
 - Apache Netbeans 16
@@ -28,8 +23,6 @@ and smoothly.
 - Customer Data
 - Purchasing Ticket
 - Dashboard
-
-
 
 
 ## Authors
