@@ -135,44 +135,11 @@
                            </children></Pane>
                         <Pane layoutX="13.0" layoutY="215.0" prefHeight="324.0" prefWidth="760.0" styleClass="bg-white" stylesheets="@design.css">
                            <children>
-                              <AnchorPane fx:id="slider1" layoutX="123.0" layoutY="36.0" prefHeight="246.0" prefWidth="425.0">
-                                 <children>
-                                    <ImageView fx:id="image1" fitHeight="264.0" fitWidth="514.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../icons/Slider1.jpg" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane fx:id="slider2" layoutX="123.0" layoutY="36.0" prefHeight="264.0" prefWidth="425.0">
-                                 <children>
-                                    <ImageView fx:id="image2" blendMode="SRC_ATOP" fitHeight="265.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../icons/Slider2.jpg" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane fx:id="slider3" layoutX="123.0" layoutY="36.0" prefHeight="264.0" prefWidth="426.0">
-                                 <children>
-                                    <ImageView fx:id="image3" fitHeight="264.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../icons/Slider3.jpg" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane fx:id="slider4" layoutX="123.0" layoutY="36.0" prefHeight="264.0" prefWidth="424.0">
-                                 <children>
-                                    <ImageView fx:id="image4" fitHeight="255.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../icons/Slider4.jpg" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </AnchorPane>
-                              <Button layoutX="14.0" layoutY="149.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="30.0" style="-fx-background-color: WHITE;" text="&lt;" />
-                              <Button layoutX="716.0" layoutY="149.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="30.0" style="-fx-background-color: WHITE;" text="&gt;" />
+                              <ImageView fx:id="imageview" fitHeight="288.0" fitWidth="521.0" layoutX="150.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/Slider1.jpg" />
+                                 </image>
+                              </ImageView>
                            </children></Pane>
                      </children>
                   </AnchorPane>

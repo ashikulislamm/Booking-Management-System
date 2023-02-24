@@ -7,6 +7,7 @@ package Main;
 //import javafx.*;
 import java.io.File;
 import java.io.IOException;
+import static java.lang.Thread.sleep;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -50,6 +51,8 @@ import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import java.sql.Time;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.animation.TranslateTransition;
 import javafx.util.Duration;
 
@@ -99,7 +102,7 @@ public class dashboardController implements Initializable {
         availablemovies.setVisible(false);
         customers.setVisible(false);
         editscreen.setVisible(false);
-        
+
         displayTotalSOldTicket();
         displayTotalAvaiableMovie();
         displayTotalIncome();
@@ -599,10 +602,8 @@ public class dashboardController implements Initializable {
         }
 
     }
-    
-    
-    ///Customer
 
+    ///Customer
     public ObservableList<customerData> customerList() {
         ObservableList<customerData> customerL = FXCollections.observableArrayList();
         String sql = "SELECT * FROM customer";
@@ -651,7 +652,7 @@ public class dashboardController implements Initializable {
                     return true;
                 } else if (predicateCustomer.getDate().toString().contains(searchKey)) {
                     return true;
-                } 
+                }
 
                 return false;
 
@@ -747,84 +748,79 @@ public class dashboardController implements Initializable {
     }
     ///Dahsboard
     private int totalMovies;
-    private void totalAvaiableMovies()
-    {
+
+    private void totalAvaiableMovies() {
         String sql = "SELECT COUNT(id) FROM movie WHERE current='Showing'";
-        
-        connect=database.connectDb();
-        
-        try{
-            prepare=connect.prepareStatement(sql);
-            result=prepare.executeQuery();
-            if(result.next())
-            {
-                totalMovies=result.getInt("count(id)");
+
+        connect = database.connectDb();
+
+        try {
+            prepare = connect.prepareStatement(sql);
+            result = prepare.executeQuery();
+            if (result.next()) {
+                totalMovies = result.getInt("count(id)");
             }
-            
-        }catch(Exception e){e.printStackTrace();}
-        
-        
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
-    
-    public void displayTotalAvaiableMovie()
-    {
+
+    public void displayTotalAvaiableMovie() {
         totalAvaiableMovies();
         availablemovie.setText(String.valueOf(totalMovies));
     }
     private double totalIncome;
-    public void totalIncome()
-    {
+
+    public void totalIncome() {
         Date date = new Date();
         java.sql.Date sqlDate = new java.sql.Date(date.getTime());
-        
-        String sql = "SELECT SUM(total) FROM customer WHERE date ='"+String.valueOf(sqlDate)+"'";
+
+        String sql = "SELECT SUM(total) FROM customer WHERE date ='" + String.valueOf(sqlDate) + "'";
         connect = database.connectDb();
-        try{
-            
+        try {
+
             prepare = connect.prepareStatement(sql);
             result = prepare.executeQuery();
-            if(result.next())
-            {
+            if (result.next()) {
                 totalIncome = result.getDouble("SUM(total)");
             }
-            
-            
-        }catch(Exception e){e.printStackTrace();}
-        
-       
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
-    
-    public void displayTotalIncome()
-    {
+
+    public void displayTotalIncome() {
         totalIncome();
         totalearning.setText(String.valueOf(totalIncome));
     }
-    
+
     private int soldTicket;
-    public void countTicket()
-    {
+
+    public void countTicket() {
         String sql = "SELECT count(id) FROM customer";
-        connect=database.connectDb();
-        try{
-            prepare=connect.prepareStatement(sql);
+        connect = database.connectDb();
+        try {
+            prepare = connect.prepareStatement(sql);
             result = prepare.executeQuery();
-            if(result.next())
-            {
+            if (result.next()) {
                 soldTicket = result.getInt("count(id)");
-                
+
             }
-                           
-        }catch(Exception e){e.printStackTrace();}
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-    
-    
-    public void displayTotalSOldTicket()
-    {
+
+    public void displayTotalSOldTicket() {
         countTicket();
         totalsoldticket.setText(String.valueOf(soldTicket));
     }
-    
-    
+
     ////////For Available movies/////////////////////////////////////////////////////////////
     private SpinnerValueFactory<Integer> spinner1;
 
@@ -1202,78 +1198,10 @@ public class dashboardController implements Initializable {
     public void displayUsername() {
         dashboard_username.setText(getData.uname);
     }
-    ///Slider
-   
-    @FXML
-    private ImageView image1;
 
-    @FXML
-    private ImageView image2;
-
-    @FXML
-    private ImageView image3;
-
-    @FXML
-    private ImageView image4;
-
-    @FXML
-    private AnchorPane slider1;
-
-    @FXML
-    private AnchorPane slider2;
-
-    @FXML
-    private AnchorPane slider3;
-
-    @FXML
-    private AnchorPane slider4;
-    
-    
-    
-    
-    public void translateAnimation(double duration, Node node , double width)
-    {
-        TranslateTransition t = new TranslateTransition(Duration.seconds(duration), node);
-        t.setByX(width);
-        t.play();
-    }
-    
-    int show=0;
-    void next()
-    {
-        if(show==0)
-        {
-            translateAnimation(0.5,slider2,-424);
-            show++;
-            
-        }
-        else if(show==1)
-        {
-            translateAnimation(0.5,slider3, -424);
-            show++;
-        }
-    }
-    
-    void back()
-    {
-       if(show==0)
-        {
-            translateAnimation(0.5,slider2,424);
-            show--;
-            
-        }
-        else if(show==1)
-        {
-            translateAnimation(0.5,slider3, 424);
-            show--;
-        } 
-    }
-    
-    
-    
-    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        slideShow();
         displayUsername();
         //For Add Movie
         showAddMoviesList();
@@ -1288,12 +1216,39 @@ public class dashboardController implements Initializable {
         showSpinnerValue();
 
         showCustomerList();
-        
+
         displayTotalSOldTicket();
         displayTotalAvaiableMovie();
         displayTotalIncome();
-        translateAnimation(0.5,slider1,424);
-        //translateAnimation(0.5,slider2,424);
+
         
+
     }
-}
+
+    //Slider
+    @FXML
+    private ImageView imageview;
+    int count;
+    public void slideShow()
+    {
+        ArrayList<Image> images;
+        images = new ArrayList<Image>();
+        images.add(new Image("F:\\Software Development II\\Booking-Management-System\\src\\icons\\Slider1.jpg"));
+        images.add(new Image("F:\\Software Development II\\Booking-Management-System\\src\\icons\\Slider2.jpg"));
+        images.add(new Image("F:\\Software Development II\\Booking-Management-System\\src\\icons\\Slider3.jpg"));
+        images.add(new Image("F:\\Software Development II\\Booking-Management-System\\src\\icons\\Slider4.jpg"));
+        
+        Timeline timeline;
+        timeline = new Timeline(new KeyFrame(Duration.seconds(2), event ->{
+            imageview.setImage(images.get(count));
+            count++;
+            if(count == 4)
+            {
+                count=0;
+            }
+        }));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
+    }
+    
+}   
