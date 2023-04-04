@@ -24,6 +24,10 @@ and smoothly.
 - Purchasing Ticket
 - Dashboard
 
+## Login UI
+![login](https://user-images.githubusercontent.com/88205240/229779709-22a605af-61e3-4d07-8d80-9879f0eea17e.png)
+## Dashboard UI
+![dashboard](https://user-images.githubusercontent.com/88205240/229779798-770198fd-cadc-4a82-8637-24361236a32c.png)
 
 ## Authors
 
