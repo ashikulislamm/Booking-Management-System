@@ -29,7 +29,7 @@ and smoothly.
 ## Dashboard UI
 ![dashboard](https://user-images.githubusercontent.com/88205240/229779798-770198fd-cadc-4a82-8637-24361236a32c.png)
 
-## Authors
+## Contributors
 
 - [@Afia Fahmida](https://github.com/theta131)
 
